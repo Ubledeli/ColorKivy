@@ -1,0 +1,24 @@
+Colors:
+
+<Colors>:
+	led_input:led
+	wheel_1_input:wheel_1
+	wheel_2_input:wheel_2
+	BoxLayout:
+		orientation: 'vertical'
+		BoxLayout:
+			ColorWheel:
+				id: wheel_1
+				on_color:root.light()
+			ColorWheel:
+				id: wheel_2
+				on_color:root.light()
+		Slider:
+			min: 0
+			max: 1023
+			step: 1
+			value: 100
+			value_track: True
+			value_track_color:[0,0,1,1]
+			id: led
+			on_value:root.light()
